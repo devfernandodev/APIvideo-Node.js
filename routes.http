@@ -1,0 +1,31 @@
+POST http://localhost:3211/videos
+Content-Type: application/json
+
+{
+    "title": "video node",
+    "description":"this is the first video",
+    "duration":180
+}
+
+###
+
+
+
+GET http://localhost:3211/videos
+
+
+
+###
+
+PUT http://localhost:3211/videos/9d342da8-bc82-4461-8133-b960d828874f
+Content-Type: application/json
+
+{
+    "title": "video 02",
+    "description":"this is the first video",
+    "duration":180
+}
+
+###
+
+DELETE http://localhost:3211/videos/9d342da8-bc82-4461-8133-b960d828874f
