@@ -54,6 +54,6 @@ server.delete("/videos/:id", async (request, reply) => {
 
 // escutando uma porta tipo localhost usando o metodo .listen({port: 3211})
 server.listen({
-  host: "0.0.0.0",
+  host: '0.0.0.0',
   port: process.env.PORT ?? 3211,
 });
