@@ -1,5 +1,5 @@
 // importando o fastify
-import { fastify } from "fastify";
+import fastify from "fastify";
 
 import { databasePostgres } from "./database-postgres.js";
 
@@ -45,7 +45,7 @@ server.put("/videos/:id", async (request, reply) => {
   return reply.status(204).send();
 });
 // ROTA DELETE para deletar um video usando o seu id
-server.delete("/videos/:id", async(request, reply) => {
+server.delete("/videos/:id", async (request, reply) => {
   const videoId = request.params.id;
   await database.delete(videoId);
 
@@ -54,6 +54,6 @@ server.delete("/videos/:id", async(request, reply) => {
 
 // escutando uma porta tipo localhost usando o metodo .listen({port: 3211})
 server.listen({
-  host: '0.0.0.0',
+  host: "0.0.0.0",
   port: process.env.PORT ?? 3211,
 });
